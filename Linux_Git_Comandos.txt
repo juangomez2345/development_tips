@@ -1,0 +1,171 @@
+=========================================================================
+
+  LINUX GIT COMMANDS
+
+=========================================================================
+
+
+Git
+-----------------------------------------------------------------------
+git init        		prepara nuestro directorio para ser utilizado con git
+
+git clone			descarga el proyecto del repositorio remoto a local
+				git clone https://github.com/juangomez2345/project.git
+
+git branch			imprime en que branch estoy y cuales mas existen
+git branch -d test		borra la rama test
+git branch -a			muestra todos los branches disponibles
+
+git checkout			mueve de un branch a otro
+git checkout -b test		crea nueva rama "test" y te mueva a ella
+git checkout master		se mueve a la rama master
+
+git push -u origin master	envia mis cambios locales al remoto
+git push origin <branch>	una rama nueva no estara disponible a menos que subas (push) 
+				la rama a tu repositorio remoto
+				
+git fetch			actualiza el repositorio local sin hacer merge
+git pull			actualiza el repositorio local haciendo merge
+git add				marca los archivos para ser commitiados
+git commit			marca cambios como "listos" a enviar al repositorio remoto
+
+git status			muestra los cambios realizados en el repositorio local
+ 				que archivos han sido modificados/agregados
+
+git diff			muestra las diferencias y cambios realizados
+git diff origin/master		muestra que cambios difieren entre local y remoto
+
+git reset --hard HEAD		descarta el merge
+git reset --hard origin/master	descarta todo mis cambios locales
+git fetch origin		descarta todo mis cambios locales
+
+git remote update origin	sincroniza los branches locales y remotos
+git remote update		sincroniza los cambios
+
+git status -uno			detecta que cambios fueron realizados
+
+git show-branch master		muestra los commits hechos a ese branch
+
+git remote show origin		muestra un resumen de que branches faltan x sincronizarse
+
+git stash			guarda tu cambios en temporal y libera el codigo dejandolo limpio
+git stash list			muestra los stashes apilados para elegir a que punto regresar
+git stash apply			permite elegir que stash tomaras de la pila
+
+git blame file.txt		muestra que y quien modifico ese archivo
+
+
+
+
+comandos mas comunes de usar
+-----------------------------------------------------------------------
+git add file.txt		marca el archivo a ser comitiado
+git commit -m "comentario"	agrega un comentario al commit
+git push origin master		envia mis cambios locales al remoto
+
+git checkout file.txt		descarta los cambios realizados antes de ser marcados
+git reset file.txt		descarta los cambios realizados despues de ser marcados
+
+git difftool file		lanza una tool externa para comparar diferencias ejmp BeyonCompare
+
+git whatchanged origin/maser	muestra el ultimo comit realizado al branch
+
+git log origin/master		permite ver un resumen de actividad en el branch
+
+
+
+
+
+Git nuevo (local a remoto)
+-----------------------------------------------------------------------
+git init
+git remote add origin https://github.com/juangomez2345/project.git
+git add *
+git commit -m 'primer commit'
+git push -u origin master
+
+
+
+
+Git clone (remoto a local)
+-----------------------------------------------------------------------
+git clone https://github.com/juangomez2345/project.git
+git status
+git add .
+git commit -m "first commit"
+git push -u origin master
+
+
+
+
+configurar Beyond Compare
+-----------------------------------------------------------------------
+git config --global diff.tool bc3
+git config --global difftool.bc3.path "C:/Program....../BCompare.exe"
+
+edit: C/user/username/.gitconfig
+tool = bc3
+[difftool "bc3"]
+cmd = \"C:/Program....../BCompare.exe" \"$LOCAL\" \"REMOTE\"
+[merge]
+tool = bc3
+[mergetool "bc3"]
+cmd = \"C:/Program....../BCompare.exe" \"$LOCAL\" \"REMOTE\" \"\$BASE" \"$MERGED\"
+trustExitCode =  true
+
+
+revisa los cambios usando el comando
+git config --global --edit
+
+
+Los archivos comparados se almacenan temporalmente en el siguiente path
+user/username/appdata/local/temp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
