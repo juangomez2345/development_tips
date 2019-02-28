@@ -87,6 +87,16 @@ git push -u origin master
 
 
 
+Git nuevo branch(local a remoto)
+-----------------------------------------------------------------------
+git checkout -b my_new_branch_name
+git add .
+git commit -m "comments"
+git push -u origin my_new_branch_name
+
+
+
+
 Git clone (remoto a local)
 -----------------------------------------------------------------------
 git clone https://github.com/juangomez2345/project.git
