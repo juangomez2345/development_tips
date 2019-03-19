@@ -30,6 +30,21 @@ functions	palabra reservada para crear funciones en js
 ===		compara referencia de objectos 
 
 
+...		operador de propagacion (spread operator)
+		permite que una expresion sea expandida en situaciones donde se esperan 
+		multiples argumentos (llamadas a funciones) o 
+		multiples elementos (arrays literales)
+		
+
+this		su valor hace referencia al propietario de la funcion que la esta invocando 
+		o al objeto donde dicha funcion es un metodo
+
+
+metodo bind	se define como un pseudo constructor
+		cuando se ejecuta sobre una funcion, este crea una nueva funcion que nos 
+		permite manipular tanto su valor this como los parametros que espera
+		permiten ademas clonar objetos y sobreescribir sus propiedades y metodos nativos
+
 
 metodos de un
 array		.pop();		// regresa el ultimo valor del arreglo
@@ -187,6 +202,21 @@ Valores
 
 Funciones flecha
 ----------------------------------------------------------------------
+		function sumar(a, b) { return a+b; }   // funcion normal
+		var sumar = (a, b) => { return a+b; }  // funcion flecha
+
+		Con las funciones flecha:
+
+		- Eliminamos la palabra reservada function
+		- Las funciones flecha son siempre anonimas
+		- No es necesario colocar los parametros entre parentesis si solo hay un parametro. 
+		- Si no necesitamos parametros, tenemos que incluir el parentesis vacio
+		- Si solo tenemos una instruccion en el cuerpo no necesitamos usar las llaves
+		- Si necesitamos incluir varias instrucciones en nuestra funcion, 
+		  entonces necesitamos incluir las clasicas llaves y el retorno
+		- Si la funcion tiene que devolver un objeto, tenemos que ponerlo entre parentesis
+
+
 
 
 
