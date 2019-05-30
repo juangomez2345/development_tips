@@ -1,0 +1,64 @@
+//producer v1
+@Component
+public void kafkaProducer(){
+  Properties props = new Properties()
+  props.put(BOOTSRAPServers, BOOTSTRAPServers);
+  props.put(clientid, clientid);
+  props.put(keyserilaizaer,String.getName);
+  props.put(valueserializaer,string.getname);
+  props.put(intrerceptor,monitorinsproducerinterceptor);
+
+  kafkaProducer<String,String> producer = new kafkaProducer<String,String>(props);
+  RecordMetaData metadata = producer.send(new ProducerRecord<String,String>(topic, application, message)).get();
+  sysout(metadata.partition())
+  sysout(metadata.offset())
+  sysout(metadata.value())
+}
+
+
+//producer v2
+@RestController
+@Autowired
+private kafkaTemplate<String,String> kafkaTemplate;
+public void publish(){
+  kafkaTemplate.send(topic,msg)
+}
+
+@Configuration
+public class KafkaProducerConfig{
+  public kafkaProducerFactory<String,String> createProducerFactory(){
+    Map<String,Object> props = new HashMap<>();
+    props.put(BOOTSRAPServers, BOOTSTRAPServers);
+    props.put(clientid, clientid);
+    props.put(keyserilaizaer,String.getName);
+    props.put(valueserializaer,string.getname);
+    props.put(intrerceptor,monitorinsproducerinterceptor);
+    return new kafkaProducerFactory<String,String>(props);
+  }
+
+  @Bean(name="kafkaTemplate")
+  public kafkaTemplate<String,String> kafkaTemplate(){
+    kafkaProducerFactory<String,String> producerFactory = createProducerFactory();
+    return new kafkaTemplate<>(producerFactory);
+  }
+}
+
+
+
+//consumer v1
+@Component
+public void kafkaConsumer(){
+  Properties props = new Properties()
+  props.put(BOOTSRAPServers, BOOTSTRAPServers);
+  props.put(keydeserilaizaer,String.getName);
+  props.put(valuedeserializaer,string.getname);
+  props.put(groupid, groupid);
+  props.put(autooffset, "earliest");
+  props.put(intrerceptor,monitorinsproducerinterceptor);
+  kafkaConsumer<String,String> consumer = new kafkaConsumer<String,String>(props);
+  consumer.subscribe(Arrays.asList(topics))
+  consumerRecords<String,String> records = consumer.poll(100);
+  for(consumerRecord<String,String> record: records){
+    record.value();
+  }
+}
