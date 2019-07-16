@@ -1,0 +1,143 @@
+==========================================================================
+  SPRING CORE
+==========================================================================
+
+https://springframework.guru/spring-framework-annotations/
+
+
+Container			encargado de administrar, gestionar, 
+				inyectar los beans de spring
+
+Core				el spring container realiza el cargado de
+ 				beans mucho antes de el resto de las clases
+				esto con el fin de tenerlos listos
+
+
+Aplicationcontext
+BeanFactory			contenedores de spring
+
+
+
+@Required
+@Autowired
+@Qualifier
+
+@Configuration				indica que es un bean de tipo
+					configuracion
+
+@ComponentScan				realiza la busqueda de beans para 
+					inyectarlos al ApplicationContext
+@Bean
+@Lazy
+@Value
+
+@Controller
+@Service
+@Repository
+
+
+
+
+==========================================================================
+ SPRING BOOT
+==========================================================================
+
+
+
+@EnableAutoConfiguration		inyecta beans de tipo @Configuration
+					que remplazaran a las configurariones 
+					pre-configuradas
+
+@SpringBootApplication			anotacion que contiene @Configuration,
+					@ComponentScan, @EnableAutoConfiguration
+					en un solo punto de entrada
+
+@RequestMapping				su parametro indica el valor de la URI 
+					a la que respondera
+@CookieValue
+@CrossOrigin
+@GetMapping
+@PostMapping
+@PutMapping
+@PatchMapping
+@DeleteMapping
+@ExceptionHandler
+@InitBinder
+@Mappings and @Mapping
+@MatrixVariable
+@PathVariable
+@RequestAttribute
+@RequestBody				indica que el metodo sera quien respondera
+					y escribira en la respuesta, evitando asi
+					el manejo de una vista
+@RequestHeader
+@RequestParam
+@ResponseBody
+@ResponseStatus
+@ControllerAdvice
+@RestController
+@RestControllerAdvice
+@SessionAttribute
+@SessionAttributes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
