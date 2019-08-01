@@ -11,8 +11,9 @@ elastic search			es un servidor/motor de busqueda de texto a documentos indexado
 fluentd				es un servicio de recoleccion de datos
 kibana 				es un complemento de visualizacion de datos para Elasticsearch
 jaeger				es un servicio de monitorizacion de transacciones entre sistemas distribuidos
+prometheus			es un software que se usa para monitorear y alertar eventos
 
-node				es un entorno en tiempo de ejecucion basado en el lenguaje de programación ECMAScript
+node				es un entorno en tiempo de ejecucion basado en el lenguaje de programaciÃ³n ECMAScript
 nginx				es un servidor web usado como proxy inverso y balanceador de carga
 
 jboss				es un servidor de aplicaciones para la plataforma JEE
