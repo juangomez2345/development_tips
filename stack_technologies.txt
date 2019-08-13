@@ -1,0 +1,136 @@
+========================================================================================================================================
+ STACK TECHNOLOGIES
+========================================================================================================================================
+hazelcast			es una plataforma de distribucion de datos en memoria normalmente corre
+				encima de una base de datos proceso que reducen la carga de consultas
+cassandra			es una base de datos NoSQL distribuida y basada en un modelo de almacenamiento de clave-valor
+
+cyberark			es un servicio de seguridad para aplicaciones ofrece seguridad de acceso privilegiado
+kafka				es un servicio de mensajeria para la manipulacion en tiempo real de fuentes de datos
+				bajo el patron publicacion/suscripcion
+
+grafana				es visualizador de datos metricos permite crear graficos 
+elastic search			es un servidor/motor de busqueda de texto a documentos indexados
+fluentd				es un servicio de recoleccion de datos
+kibana 				es un complemento de visualizacion de datos para Elasticsearch
+jaeger				es un servicio de monitorizacion de transacciones entre sistemas distribuidos
+prometheus			es un software que se usa para monitorear y alertar eventos
+
+node				es un entorno en tiempo de ejecucion basado en el lenguaje de programación ECMAScript
+nginx				es un servidor web usado como proxy inverso y balanceador de carga
+
+jboss				es un servidor de aplicaciones para la plataforma JEE
+springboot			es una herramienta de spring que busca que el desarrollador se centre en el desarrollo
+				olvidandose por completo de la compleja configuracion
+
+openshift			es un sistema de administracion y desarrollo de clusteres de contenedores
+				es una plataforma que integra Docker y Kubernetes
+kubernate			es un sistema que automatiza/administra el despliegue de aplicaciones en contenedores
+docker				es un software que automatiza el despliegue de aplicaciones dentro de contenedores
+
+jfrog				es un sistema administrador de repositorio que admite todos los formatos de paquetes
+				es una herramienta con la que se pueden comunicar todas las diferentes tecnologias
+gitlab				es un servicio web de control de versiones, estor de repositorios de codigo
+gradle				es un sistema de automatizacion para el proceso de construccion de una aplicacion
+				utiliza grovy en lugar de el ya conocido XML
+
+----------------------------------------------------------------------------------------------------------------------------------------
+ DOCKER
+----------------------------------------------------------------------------------------------------------------------------------------
+
+docker image		son las plantillas que se utilizan para crear contenedores incluyen 
+			(aplicaciones, binarios, librerias, etc).
+
+docker container	son intancias de imagenes previamente compiladas es decir son imagenes 
+			contruidas y puestas en ejecuccion
+
+Dockerfile		archivo de definicion de una imagen, contiene los comandos y dependencias 
+			para crear un imagen asi como los archivos a ser desplegados
+
+docker-compose.yml	es el archivo que define las dependencias que guarda un contenedor 
+			con otro, es la forma de agrupar y reutilizar contenedores
+
+docker: notas		no es completamente necesario un SO en una imagen, ya que docker corre
+			sobre un kernel host(redhat, centos, etc), docker crea una instancia
+			ficticia de los recursos del kernel host. 
+			al declarar un SO en el archivo dockerfile se simula un chroot que da 
+			al desarrollador una instancia de un kernel con acceso de root
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+ KUBERNETES
+----------------------------------------------------------------------------------------------------------------------------------------
+			es un administrador/orquestador de contenedores dockers
+
+pod			es la unidad basica de planificacion de kubernetes, 
+			basicamente un pod es: un espacio de ejecucion donde se define
+			que contenedores correran en el mismo espacio con este concepto
+			se logra administrar volumenes, espacio en disco, ram, etc. 
+			por individual, logrando asi que kubernetes administre pods (espacios)
+			y su ejecucion, (reinicios, ejecucion, etc)
+
+kubectl			es la herramienta de linea de comandos de kubernete utilizada para
+			desplegar y gestionar aplicaciones en kubernetes
+
+deployment.yaml		es el archivo de cargado y despliegue en kubernetes que utiliza kubectl
+			en el se especifican cantidad de replicas(pods) de tu objeto kubernetes
+			entre otras cosas
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+ OPENSHIFT
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+ MARKET TECHNOLOGIES
+----------------------------------------------------------------------------------------------------------------------------------------
+streaming platforms			netflix, youtube, livestream, decast, facebook live,etc
+
+message brokers				software/programa intermediario que traduce los mensajes
+					de un sistema, desde un lenguaje a otro
+
+performance monitoring tools		appoptics, sysdig, new relic, cloudwatch, app dinamics, etc
+
+dropwizard				es un framwork de java para construir servicios rest
+
+rabitMQ					es un software de negociacion de mensajes
+					similar a kafka
+
+splunk					software utilizado para buscar macrodatos
+ 					las caracteristicas basicas del producto incluyen: 
+					indexar cualquier tipo de dato ASCII, busquedas de historicos 
+					reportes, alertas, y paneles y analisis estadisticos.
+
+datadog					software de monitoreo para aplicaciones en la nube, monitorea
+					servidores, base de datos y analisa datos
+
+dynamo db				base de datos nosql ofrecida por amazon web service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
